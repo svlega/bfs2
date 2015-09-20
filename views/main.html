@@ -1,0 +1,18 @@
+<div class="container" ng-controller="MainCtrl">
+    <div class="row">
+	  <h1>BFS POSTS</h1>
+	</div>
+	<div class="row" ng-repeat="post in postlist">
+	  <h2 class="post-title">{{post.title}}</h2>
+	  <p class="post-summary">{{post.body|limitTo:250}}</p>		
+	  <h3 class="post-summary">{{post.comments.length}} Comments </h3>
+	
+	<div class="row" ng-repeat="comment in post.comments">
+		<span class="text-comment-name">{{comment.name}}</span>
+		<p>{{comment.body}}</p>		
+	</div>	
+	<div class="row">
+	  <a href="#/post/{{post.id}}">Read more</a></td>		
+	</div>
+	</div>	
+</div>
